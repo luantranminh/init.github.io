@@ -12,75 +12,13 @@
     
     
     <item>
-      <title>Aaa adasd</title>
-      <link>https://luantranminh.github.io/content/</link>
-      <pubDate>Tue, 06 Nov 2018 10:08:14 +0700</pubDate>
+      <title>Làm sao đóng góp cho 1 project viết bằng GO</title>
+      <link>https://luantranminh.github.io/blog/l%C3%A0m-sao-%C4%91%C3%B3ng-g%C3%B3p-cho-1-project-vi%E1%BA%BFt-b%E1%BA%B1ng-go/</link>
+      <pubDate>Tue, 06 Nov 2018 12:18:28 +0700</pubDate>
       
-      <guid>https://luantranminh.github.io/content/</guid>
-      <description> 32132132 </description>
-    </item>
-    
-    <item>
-      <title>Aaa adasd</title>
-      <link>https://luantranminh.github.io/content/</link>
-      <pubDate>Tue, 06 Nov 2018 10:08:14 +0700</pubDate>
-      
-      <guid>https://luantranminh.github.io/content/</guid>
-      <description> 32132132 </description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://luantranminh.github.io/blog/test/</link>
-      <pubDate>Tue, 06 Nov 2018 10:01:52 +0700</pubDate>
-      
-      <guid>https://luantranminh.github.io/blog/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://luantranminh.github.io/blog/test/</link>
-      <pubDate>Tue, 06 Nov 2018 10:01:52 +0700</pubDate>
-      
-      <guid>https://luantranminh.github.io/blog/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Les Misr Hugo</title>
-      <link>https://luantranminh.github.io/blog/les-misr-hugo/</link>
-      <pubDate>Mon, 21 Dec 2015 04:05:25 -0600</pubDate>
-      
-      <guid>https://luantranminh.github.io/blog/les-misr-hugo/</guid>
-      <description>11 aaaaaaaaaaaaaa ads</description>
-    </item>
-    
-    <item>
-      <title>Les Misr Hugo</title>
-      <link>https://luantranminh.github.io/blog/les-misr-hugo/</link>
-      <pubDate>Mon, 21 Dec 2015 04:05:25 -0600</pubDate>
-      
-      <guid>https://luantranminh.github.io/blog/les-misr-hugo/</guid>
-      <description>11 aaaaaaaaaaaaaa ads</description>
-    </item>
-    
-    <item>
-      <title>Les Misérables by Victor Hugo</title>
-      <link>https://luantranminh.github.io/blog/les-mis%C3%A9rables-by-victor-hugo/</link>
-      <pubDate>Mon, 21 Dec 2015 04:05:25 -0600</pubDate>
-      
-      <guid>https://luantranminh.github.io/blog/les-mis%C3%A9rables-by-victor-hugo/</guid>
-      <description> This is title </description>
-    </item>
-    
-    <item>
-      <title>Les Misérables by Victor Hugo</title>
-      <link>https://luantranminh.github.io/blog/les-mis%C3%A9rables-by-victor-hugo/</link>
-      <pubDate>Mon, 21 Dec 2015 04:05:25 -0600</pubDate>
-      
-      <guid>https://luantranminh.github.io/blog/les-mis%C3%A9rables-by-victor-hugo/</guid>
-      <description> This is title </description>
+      <guid>https://luantranminh.github.io/blog/l%C3%A0m-sao-%C4%91%C3%B3ng-g%C3%B3p-cho-1-project-vi%E1%BA%BFt-b%E1%BA%B1ng-go/</guid>
+      <description>Vấn đề Hôm trước, mình có gặp 1 project nhỏ viết bằng golang, hí hửng fork và clone về chạy thử . Nhưng đời không như mơ:
+Tất cả relative import trong project đều bị lỗi. Nếu muốn sử dụng được, mình phải đổi tất cả openebs/maya thành tên repo của mình luantranminh/maya. Rồi lỡ có phát hiện gì đó muốn pull request cho người ta thì sao 😨, bó tay.</description>
     </item>
     
   </channel>
