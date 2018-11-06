@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Arthur Dent</title>
-    <link>https://you.github.io/tags/</link>
-    <description>Recent content in Tags on Arthur Dent</description>
+    <title>Tags on Minh Luan</title>
+    <link>https://luantranminh.github.io/tags/</link>
+    <description>Recent content in Tags on Minh Luan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 06 Nov 2018 10:08:14 +0700</lastBuildDate>
     
-	<atom:link href="https://you.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://luantranminh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A</title>
-      <link>https://you.github.io/tags/a/</link>
+      <link>https://luantranminh.github.io/tags/a/</link>
       <pubDate>Tue, 06 Nov 2018 10:08:14 +0700</pubDate>
       
-      <guid>https://you.github.io/tags/a/</guid>
+      <guid>https://luantranminh.github.io/tags/a/</guid>
       <description></description>
     </item>
     
