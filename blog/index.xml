@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Làm sao đóng góp cho 1 project viết bằng GO</title>
-      <link>https://luantranminh.github.io/blog/l%C3%A0m-sao-%C4%91%C3%B3ng-g%C3%B3p-cho-1-project-vi%E1%BA%BFt-b%E1%BA%B1ng-go/</link>
+      <title>Làm sao đóng góp cho 1 project viết bằng GO với git</title>
+      <link>https://luantranminh.github.io/blog/l%C3%A0m-sao-%C4%91%C3%B3ng-g%C3%B3p-cho-1-project-vi%E1%BA%BFt-b%E1%BA%B1ng-go-v%E1%BB%9Bi-git/</link>
       <pubDate>Tue, 06 Nov 2018 12:18:28 +0700</pubDate>
       
-      <guid>https://luantranminh.github.io/blog/l%C3%A0m-sao-%C4%91%C3%B3ng-g%C3%B3p-cho-1-project-vi%E1%BA%BFt-b%E1%BA%B1ng-go/</guid>
+      <guid>https://luantranminh.github.io/blog/l%C3%A0m-sao-%C4%91%C3%B3ng-g%C3%B3p-cho-1-project-vi%E1%BA%BFt-b%E1%BA%B1ng-go-v%E1%BB%9Bi-git/</guid>
       <description>Vấn đề Hôm trước, mình có gặp 1 project nhỏ viết bằng golang, hí hửng fork và clone về chạy thử . Nhưng đời không như mơ:
 Tất cả relative import trong project đều bị lỗi. Nếu muốn sử dụng được, mình phải đổi tất cả openebs/maya thành tên repo của mình luantranminh/maya. Rồi lỡ có phát hiện gì đó muốn pull request cho người ta thì sao 😨, bó tay.</description>
     </item>

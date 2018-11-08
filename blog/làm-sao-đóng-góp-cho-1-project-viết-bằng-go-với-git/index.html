@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Minh Luan">
+<meta name="description" content="Vấn đề Hôm trước, mình có gặp 1 project nhỏ viết bằng golang, hí hửng fork và clone về chạy thử . Nhưng đời không như mơ:
+Tất cả relative import trong project đều bị lỗi. Nếu muốn sử dụng được, mình phải đổi tất cả openebs/maya thành tên repo của mình luantranminh/maya. Rồi lỡ có phát hiện gì đó muốn pull request cho người ta thì sao 😨, bó tay.">
+
+<meta property="og:title" content="Làm sao đóng góp cho 1 project viết bằng GO với git" />
+<meta property="og:description" content="Vấn đề Hôm trước, mình có gặp 1 project nhỏ viết bằng golang, hí hửng fork và clone về chạy thử . Nhưng đời không như mơ:
+Tất cả relative import trong project đều bị lỗi. Nếu muốn sử dụng được, mình phải đổi tất cả openebs/maya thành tên repo của mình luantranminh/maya. Rồi lỡ có phát hiện gì đó muốn pull request cho người ta thì sao 😨, bó tay." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://luantranminh.github.io/blog/l%C3%A0m-sao-%C4%91%C3%B3ng-g%C3%B3p-cho-1-project-vi%E1%BA%BFt-b%E1%BA%B1ng-go-v%E1%BB%9Bi-git/" /><meta property="article:published_time" content="2018-11-06T12:18:28&#43;07:00"/>
+<meta property="article:modified_time" content="2018-11-06T12:18:28&#43;07:00"/>
+
+
+<title>
+
+
+     Làm sao đóng góp cho 1 project viết bằng GO với git 
+
+</title>
+<link rel="canonical" href="https://luantranminh.github.io/blog/l%C3%A0m-sao-%C4%91%C3%B3ng-g%C3%B3p-cho-1-project-vi%E1%BA%BFt-b%E1%BA%B1ng-go-v%E1%BB%9Bi-git/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://luantranminh.github.io/css/reset.css?t=2018-11-08%2013%3a00%3a15.529170532%20%2b0700%20%2b07%20m%3d%2b0.124853373">
+    <link rel="stylesheet" href="https://luantranminh.github.io/css/pygments.css?t=2018-11-08%2013%3a00%3a15.529170532%20%2b0700%20%2b07%20m%3d%2b0.124853373">
+    <link rel="stylesheet" href="https://luantranminh.github.io/css/main.css?t=2018-11-08%2013%3a00%3a15.529170532%20%2b0700%20%2b07%20m%3d%2b0.124853373">
+    
+        <link rel="stylesheet" href="https://luantranminh.github.io/css/override.css?t=2018-11-08%2013%3a00%3a15.529170532%20%2b0700%20%2b07%20m%3d%2b0.124853373">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://luantranminh.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://luantranminh.github.io/"><img class="avatar" src="https://luantranminh.github.io/img/profile.png" srcset="https://luantranminh.github.io/img/profile.png 1x"></a>
+            
+            <a href="https://luantranminh.github.io/"><div class="name">Minh Luan</div></a>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://luantranminh.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://luantranminh.github.io/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://luantranminh.github.io/code/"><span>Code</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="https://github.com/luantranminh" target="_blank" rel="noopener"><img class="icon" src="https://luantranminh.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+            <a href="https://daf.ug/@minhluan" target="_blank" rel="noopener"><img class="icon" src="https://luantranminh.github.io/img/mastodon.svg" alt="mastodon" /></a>
+        
+
+        
+            <a href="http://www.linkedin.com/in/tranminhluan" target="_blank" rel="noopener"><img class="icon" src="https://luantranminh.github.io/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="https://www.instagram.com/minhluaannn/" target="_blank" rel="noopener"><img class="icon" src="https://luantranminh.github.io/img/instagram.svg" alt="instagram" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:tranminhluan1206@gmail.com"><img class="icon" src="https://luantranminh.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Làm sao đóng góp cho 1 project viết bằng GO với git
+
+</div>
+
+                    <div class="initials"><a href="https://luantranminh.github.io/">ad</a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Tue Nov 6 2018 12:18:28 &#43;07'>Nov 6, 2018</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<h5 id="vấn-đề">Vấn đề</h5>
+
+<p>Hôm trước, mình có gặp 1 project nhỏ viết bằng golang, hí hửng fork và clone về chạy thử . Nhưng đời không như mơ:</p>
+
+<p><img src="../../img/lam-sao-de-dong-gop-golang/blog1.png" alt="" /></p>
+
+<p>Tất cả relative import trong project đều bị lỗi. Nếu muốn sử dụng được, mình phải
+đổi tất cả <code>openebs/maya</code> thành tên repo của mình <code>luantranminh/maya</code>. Rồi lỡ có phát hiện gì đó muốn pull request cho người ta thì sao 😨, bó tay. 😒 Lại phải sửa ngược lại.</p>
+
+<h5 id="giờ-sao">Giờ sao</h5>
+
+<p>Git cho phép ta sửa remote của local repo. Giờ ta sẽ biến cái repo vừa fork trên github của mình thành remote.</p>
+
+<p>Ví dụ thằng có github user là <code>luantranminh</code> muốn cống hiến gì đó cho project <code>https://github.com/openebs/maya</code>:</p>
+
+<ol>
+<li><p>Vào đó và fork nó về.</p></li>
+
+<li><p>Chạy <code>go get https://github.com/openebs/maya</code>.</p></li>
+
+<li><p><code>cd $GOPATH/src/github.com/openebs/maya</code>.</p></li>
+
+<li><p>Lúc này mình thêm repo trêm github của mình làm remote: <code>git remote add luantranminh git@github.com:luantranminh/maya.git</code>.</p></li>
+
+<li><p><code>git fetch --all</code>.</p></li>
+
+<li><p>Tạo 1 branch mới để làm việc trên đó: <code>git checkout -b fix/mybranch</code>.</p></li>
+
+<li><p>Commit và push code lên remote, lưu ý giờ mình sẽ không push lên <strong>origin</strong> nữa mà là <strong>luantranminh</strong>: <code>git commit -m &quot;Fixed bugs, Added more bugs to fix later&quot; &amp;&amp; git push luantranminh fix/mybranch</code>.</p></li>
+
+<li><p>Lên github tạo pull request và chuẩn bị trở thành contributor cho cộng đồng open source thoai.</p></li>
+</ol>
+
+<p><img src="../../img/lam-sao-de-dong-gop-golang/go.jpeg" alt="" /></p>
+
+                <br>
+                
+                  <div class="tags">
+                    <strong>Tags:</strong>
+                  
+                    <a href="https://luantranminh.github.io/tags/golang">golang</a>
+                  
+                    <a href="https://luantranminh.github.io/tags/git">git</a>
+                  
+                  </div>
+                  <br />
+                
+                <p class="back-to-posts"><a href="https://luantranminh.github.io/blog">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+
