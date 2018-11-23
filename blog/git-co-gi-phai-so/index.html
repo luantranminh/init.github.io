@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Minh Luan">
+<meta name="description" content="Đây là GIT, tool này cool lắm để xài nó thì chỉ cần nhớ vài command lines. Nếu bị lỗi á hả, lưu project ở chỗ khác xong xóa nó luôn đi, sau đó thì tải project không lỗi trên git về. Nghe quen không? source: xkcd Hỏi nhanh  Q: Git là gì?
+A: Git là một hệ thống quản lý mã nguồn (version control), phân tán . Q: Git để làm gì?">
+
+<meta property="og:title" content="Tao không sợ Git" />
+<meta property="og:description" content="Đây là GIT, tool này cool lắm để xài nó thì chỉ cần nhớ vài command lines. Nếu bị lỗi á hả, lưu project ở chỗ khác xong xóa nó luôn đi, sau đó thì tải project không lỗi trên git về. Nghe quen không? source: xkcd Hỏi nhanh  Q: Git là gì?
+A: Git là một hệ thống quản lý mã nguồn (version control), phân tán . Q: Git để làm gì?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://luantranminh.github.io/blog/git-co-gi-phai-so/" /><meta property="article:published_time" content="2018-11-23T15:11:00&#43;07:00"/>
+<meta property="article:modified_time" content="2018-11-23T15:11:00&#43;07:00"/>
+
+
+<title>
+
+
+     Tao không sợ Git 
+
+</title>
+<link rel="canonical" href="https://luantranminh.github.io/blog/git-co-gi-phai-so/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://luantranminh.github.io/css/reset.css?t=2018-11-23%2020%3a22%3a09.249911097%20%2b0700%20%2b07%20m%3d%2b0.082590826">
+    <link rel="stylesheet" href="https://luantranminh.github.io/css/pygments.css?t=2018-11-23%2020%3a22%3a09.249911097%20%2b0700%20%2b07%20m%3d%2b0.082590826">
+    <link rel="stylesheet" href="https://luantranminh.github.io/css/main.css?t=2018-11-23%2020%3a22%3a09.249911097%20%2b0700%20%2b07%20m%3d%2b0.082590826">
+    
+        <link rel="stylesheet" href="https://luantranminh.github.io/css/override.css?t=2018-11-23%2020%3a22%3a09.249911097%20%2b0700%20%2b07%20m%3d%2b0.082590826">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://luantranminh.github.io/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://luantranminh.github.io/"><img class="avatar" src="https://luantranminh.github.io/img/pr.gif" srcset="https://luantranminh.github.io/img/pr.gif 1x"></a>
+            
+            <a href="https://luantranminh.github.io/"><div class="name">Minh Luan</div></a>
+            
+              <h3 class="self-intro">&#34;The secret of getting ahead is getting started.&#34; - Mark Twain</h3>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://luantranminh.github.io/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://luantranminh.github.io/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://luantranminh.github.io/code/"><span>Code</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="https://github.com/luantranminh" target="_blank" rel="noopener"><img class="icon" src="https://luantranminh.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+            <a href="https://daf.ug/@minhluan" target="_blank" rel="noopener"><img class="icon" src="https://luantranminh.github.io/img/mastodon.svg" alt="mastodon" /></a>
+        
+
+        
+            <a href="http://www.linkedin.com/in/tranminhluan" target="_blank" rel="noopener"><img class="icon" src="https://luantranminh.github.io/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="https://www.instagram.com/minhluaannn/" target="_blank" rel="noopener"><img class="icon" src="https://luantranminh.github.io/img/instagram.svg" alt="instagram" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:tranminhluan1206@gmail.com"><img class="icon" src="https://luantranminh.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Tao không sợ Git
+
+</div>
+
+                    <div class="initials"><a href="https://luantranminh.github.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Fri Nov 23 2018 15:11:00 &#43;07'>Nov 23, 2018</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>8 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/25551568/48826509-11dacb00-ed9d-11e8-8c36-87cdf13a167a.png" alt="Thấy quen không"/>
+</p>
+<p align="center">
+  Đây là GIT, tool này cool lắm để xài nó thì chỉ cần nhớ vài command lines. Nếu bị lỗi á hả, lưu project ở chỗ khác xong xóa nó luôn đi, sau đó thì tải project không lỗi trên git về. Nghe quen không?
+</p>
+<p align="center">
+<a href="https://imgs.xkcd.com/comics/git.png" target="_blank">source: xkcd</a>
+</p>
+
+<h2 id="hỏi-nhanh">Hỏi nhanh</h2>
+
+<ul>
+<li>Q: Git là gì?<br>
+A: Git là một hệ thống quản lý mã nguồn (version control), phân tán .</li>
+<li>Q: Git để làm gì?<br>
+A: Để quản lý mã nguồn chứ chi.</li>
+<li>Q: Không xài Git có code được không?<br>
+A: Được, trước giờ có biết Git là quần gì đâu 😟.</li>
+<li>Q: Git có phải giải pháp duy nhất cho quản lý mã nguồn không?<br>
+A: Không, &ldquo;giang hồ&rdquo;  thì xài Google Drive, USB &hellip; 😨 chép files qua lại thôi.
+Hoặc nhiều version control systems thay thế như <a href="https://en.wikipedia.org/wiki/Subversion_(software)">Subversion</a> (SVN), <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">Concurrent Versions System</a> (CVS)&hellip;</li>
+</ul>
+
+<h2 id="tại-sao-cần-git">Tại sao cần Git</h2>
+
+<p>Khi một project lớn lên, nhiều người cùng làm hơn, chúng ta cần kiểm soát được ai, làm gì (để khi có bug thì còn biết đổ tội cho thằng nào), hoặc thấy phiên bản này nhiều bugs quá cần quay lại code cũ đã ổn định gấp để release không bị sếp chửi.<br>
+Hoặc nếu bạn là &ldquo;solo man&rdquo; làm việc một mình, code một tính năng mới hết 3 ngày, 3 ngày sau nữa thì  nó mới lỗi 😳, vào lúc đó các lập trình viên thường lại rơi vào trạng thái quen thuộc: mất trí nhớ.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/25551568/48932921-c8bb8000-ef30-11e8-9088-16e9bccf8181.png" height="60%" width="60%" alt="Thấy quen không"/>
+</p>
+ Thế là version control ra đời, à bài này nói về Git, nên Git ra đời.</p>
+
+<h2 id="sử-dụng-git-như-thế-nào">Sử dụng Git như thế nào</h2>
+
+<p>Nếu bạn hoàn toàn là ma mới, chưa từng xài Git, nghe người khác nói về Git như là vịt nghe sấm, thì đây là vài keywords giúp bạn giải ngố:<br>
+- <strong>repository</strong>: nơi để lưu trữ, là thư mục chứa tất cả code, version.<br>
+- <strong>head</strong>: một con trỏ (😅 lại con trỏ) chỉ vô code mới nhất bạn đang làm việc.<br>
+- <strong>add</strong>: kêu Git &ldquo;Ê, track file này dùm tao&rdquo;<br>
+- <strong>commit</strong>: kêu Git &ldquo;Ê, lưu trữ trạng thái repo hiện tại lại dùm tao&rdquo;.<br>
+- <strong>remote</strong>:  nơi chứa repositories nhưng không không nằm trên máy local của mình mà nằm ở đâu đó khác (như Github, Gitlab &hellip;).<br>
+- <strong>pull</strong>: kêu Git &ldquo;Ê, lấy code trên remote về cho tao&rdquo;.<br>
+- <strong>push</strong>: kêu Git &ldquo;Ê, đẩy code này lên remote cho tao&rdquo;.<br>
+- <strong>merge</strong>: kết hợp 2 versions khác nhau của code lại thành 1 (lưỡng long nhất thể).<br>
+- <strong>status</strong>: hiển thị thông tin về tình trạng hiện tại của repo.<br></p>
+
+<h2 id="nơi-ở-của-git">Nơi ở của Git</h2>
+
+<p>Nếu bạn để ý, thì nếu trong mỗi repo có Git, thì sẽ có 1 folder ẩn là: <code>.git</code> trong đó chứa</p>
+
+<pre><code>.git/
+├── HEAD
+├── config
+├── description
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   ├── pre-receive.sample
+│   ├── prepare-commit-msg.sample
+│   └── update.sample
+├── info
+│   └── exclude
+├── objects
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    └── tags
+8 directories, 14 files
+</code></pre>
+
+<p>Đây là nơi Git làm việc, xử lý đống lộn xộn dùng bạn.</p>
+
+<p>Trong đây bao gồm 3 phần: object store, index và working directory.</p>
+
+<h2 id="the-object-store">The Object Store</h2>
+
+<p>Đây là cách mà Git lưu trữ mọi thứ, khi gọi lệnh <strong>add</strong> lúc đó Git sẽ hash file vừa được add và lưu trữ  cái vừa hash ra.<br>
+Ví dụ, bạn tạo 1 file <code>README.md</code> mới, bạn gọi lệnh <code>git add README.md</code> (&ldquo;Ê, track file <code>README.md</code> dùm tao&rdquo;, lúc này thằng Git sẽ thêm file <code>README.md</code> vào git object store)<br>
+Sau khi gọi lệnh trên thì cái thư mục <code>.git</code> của mình sẽ biến thành:
+<pre>
+.git/
+├── HEAD
+├── config
+├── description
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   ├── pre-receive.sample
+│   ├── prepare-commit-msg.sample
+│   └── update.sample
+├── index
+├── info
+│   └── exclude
+├── objects
+│   ├──<span class="hljs-keyword">a0</span>
+│   │   └──<span class="hljs-keyword">423896973644771497bdc03eb99d5281615b51</span>
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    └── tags
+9 directories, 16 files
+</pre>
+Thấy phần tô đậm không, đó chính là thứ git vừa tạo ra sau khi ta gọi <code>git add</code>. Thật ra bên dưới git sẽ chạy câu lệnh <a href="https://git-scm.com/docs/git-hash-object">hash-object</a> :</p>
+
+<pre><code>$ git hash-object README.md
+a0423896973644771497bdc03eb99d5281615b51
+</code></pre>
+
+<p>Giống y chang cái chuỗi nhận được khi xài lệnh <code>git add</code> . Git tạo ra 1 folder gồm 2 kí tự đầu của chuỗi là <code>a0</code>, bên trong nó chứa phần còn lại. Để làm gì 😲 sau khi hỏi stackoverflow thì câu trả lời là để <a href="https://stackoverflow.com/questions/18731887/why-does-git-store-objects-in-directories-with-the-first-two-characters-of-the-h">tìm kiếm file nhanh hơn</a> và <a href="https://softwareengineering.stackexchange.com/questions/301400/why-is-the-git-git-objects-folder-subdivided-in-many-sha-prefix-folders"> lưu trữ được nhiều file hơn</a>
+Và ta có thể xem nội dung của file bằng cái hash mà Git đã lưu bằng <a href="https://git-scm.com/docs/git-cat-file">cat-file</a></p>
+
+<pre><code>$ git cat-file a0423896973644771497bdc03eb99d5281615b51 -p
+</code></pre>
+
+<p>Nhưng mà ai quan tâm, Git đã làm mọi thứ rồi, ta chỉ cần <code>git add</code> thôi.<br>
+<strong>Git add tạo ra hash, nén file vào lưu cái vừa nén vào thư mục objects</strong></p>
+
+<h2 id="the-working-directory-tree">The working directory(tree)</h2>
+
+<p>Các tên làm nên thương hiệu, đây là nơi bạn làm việc, mọi thứ bạn làm đều được lưu vết lại. Thử tạo một file mới, byebyeworld và chạy git status (trả về thông tin về trạng thái hiện tại của repo):
+<pre>
+$ git status
+On branch master
+No commits yet
+Changes to be committed:
+  (use &ldquo;git rm &ndash;cached <file>&hellip;&rdquo; to unstage)
+<b> new file:   README.md </b>
+Untracked files:
+  (use &ldquo;git add <file>&hellip;&rdquo; to include in what will be committed)
+<b> byebyeworld </b>
+</pre></p>
+
+<h2 id="the-index">The Index</h2>
+
+<p>Đây là phần lõi của Git, còn được gọi là <strong>staging</strong> area. Trong này sẽ mapping mấy cái file vào trong mấy cái ở trong phần objects của <code>.git</code>.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/25551568/48942714-47291980-ef53-11e8-83ba-3b4a9b5fb019.png" height="60%" width="60%" alt="Thấy quen không"/>
+</p></p>
+
+<p><strong>Giải thích:</strong> Chúng ta đang ở phiên bản hiện tại của code và đang làm việc trên nó (<strong>working directory</strong>), <code>git add</code> sẽ bỏ vào <strong>staging area</strong> giống giỏ hàng để biết được files nào sẽ được lưu sau commit, <code>git commit</code> sẽ bỏ những files đã <code>git add</code> vào <strong>local repository</strong>, kể từ lúc này ta đã có version mới, có thể revert lại commit trước đó.<br>
+Đi sâu hơn thì sau khi <code>git commit -m &quot;Add README.md&quot;</code>:
+<pre>
+.git/
+├── COMMIT_EDITMSG
+├── HEAD
+├── config
+├── description
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   ├── pre-receive.sample
+│   ├── prepare-commit-msg.sample
+│   └── update.sample
+├── index
+├── info
+│   └── exclude
+├── logs
+│   ├── HEAD
+│   └── refs
+│       └── heads
+│           └── master
+├── objects
+│   ├── a0
+│   │   └── 423896973644771497bdc03eb99d5281615b51
+│   ├── <span class="hljs-keyword">a3</span>
+│   │   └── <span class="hljs-keyword">9b9fdd624c35eee08a36077f411e009da68c2f</span>
+│   ├── <span class="hljs-keyword">fb</span>
+│   │   └── <span class="hljs-keyword">26ca0289762a454db2ef783c322fedfc566d38</span>
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    │   └── master
+    └── tags
+14 directories, 22 files
+</pre></p>
+
+<p>Ta sẽ có 2 file mới trong objects: sử dụng lệnh git <code>cat-file</code> để xem nó chứa gì:</p>
+
+<pre><code>$ git cat-file a39b9fdd624c35eee08a36077f411e009da68c2f -p
+tree fb26ca0289762a454db2ef783c322fedfc566d38
+author = &lt;=&gt; 1537700068 +0100
+committer = &lt;=&gt; 1537700068 +0100
+Add README.md
+
+$ git cat-file fb26ca0289762a454db2ef783c322fedfc566d38 -p
+100644 blob a0423896973644771497bdc03eb99d5281615b51 README.md
+</code></pre>
+
+<p>Cái đầu tiên chứa thông tin của cái commit đó: Ai làm gì, tại sao và <strong>tree</strong>.
+Cái thứ 2 chính là <strong>tree</strong> mà cái thứ nhất nói tới, nó chứa thông tin của file, folder được thêm trong commit đó.</p>
+
+<p>Vậy còn <strong>branches</strong> trong git là gì?</p>
+
+<pre><code>Branch là một con trỏ giúp ta dễ dàng di chuyển tới 1 commit. Branch mặc định trong Git là master
+</code></pre>
+
+<p>Có <strong>branch</strong> để làm gì? Hãy tưởng tượng bạn muốn làm gì đó nhưng sợ hư hại tới những thứ đang có, bạn muốn viết một tính năng nhảm nhí như sợ nếu nó không hoạt động thì phải chỉnh tùm lum revert mất công, <strong>branch</strong> là một giải pháp. Hãy nghĩ <strong>branch</strong> giống một phiên bản y chang của code bạn đang viết tại thời điểm tạo <strong>branch</strong>, sau đó làm việc trên <strong>branch</strong> chỉ ảnh hưởng tới <strong>branch</strong> đó thôi, thích phá gì phá.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/25551568/48944685-565f9580-ef5a-11e8-8bde-77d750eb30df.png" alt="Hihi"/>
+</p></p>
+
+<h2 id="tl-dr">TL;DR</h2>
+
+<ul>
+<li>Git làm việc với objects, phiên bản đã nén của file.</li>
+<li>Mỗi object có ID (cái hash được Git tạo ra dựa trên nội dung file).</li>
+<li>Mỗi lần chạy <code>git add</code> thì một object mới được thêm vào .git/objects, chứa <strong>toàn bộ nội dung</strong> của file, chứ không phải chỉ phần <strong>được thay đổi với phiên bản trước</strong>, đó là lý do tại sao Git không hoạt động tốt với đống file dung lượng bự (binary file &hellip;)</li>
+<li>Mỗi commit sẽ tạo 2 object:
+
+<ol>
+<li><strong>tree</strong>: commit này đã làm gì, đã thay đổi file nào.</li>
+<li><strong>commit metadata</strong>:  chứa ai là tác giả, cái *<em>tree</em> biểu diễn cho commit này là gì, nội dung commit và commit trước của nó. Các commit này được liên kết với nhau dưới dạng <strong>linked list</strong>.</li>
+</ol></li>
+<li>Branch là con trỏ trỏ tới <strong>commit metadata</strong> được lưu trữ trong <code>.git/refs/heads</code></li>
+</ul>
+
+<p>Éc, mệt quá nếu muốn đọc thêm về Git thì: <a href="https://medium.freecodecamp.org/how-not-to-be-afraid-of-git-anymore-fe1da7415286">đây</a>, <a href="https://www.git-tower.com/learn/git/ebook/en/desktop-gui/basics/what-is-version-control#start">đây</a>, <a href="http://rogerdudler.github.io/git-guide/">đây</a>, <a href="https://github.com/git-tips/tips">đây</a></p>
+
+<p>Bạn vẫn còn sợ Git, hmm, chịu thôi:
+<p align="center">
+<img src="https://user-images.githubusercontent.com/25551568/48944525-af7af980-ef59-11e8-8ba4-f68c74d0c50e.png" alt="Hihi"/>
+</p></p>
+
+                <br>
+                
+                  <div class="tags">
+                    <strong>Tags:</strong>
+                  
+                    <a href="https://luantranminh.github.io/tags/git">git</a>
+                  
+                  </div>
+                  <br />
+                
+                <p class="back-to-posts"><a href="https://luantranminh.github.io/blog">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120923883-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+
