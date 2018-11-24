@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on Minh Luan</title>
-    <link>https://luantranminh.github.io/categories/golang/</link>
+    <link>https://minhluan.ml/categories/golang/</link>
     <description>Recent content in Golang on Minh Luan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 06 Nov 2018 12:18:28 +0700</lastBuildDate>
     
-	<atom:link href="https://luantranminh.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://minhluan.ml/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Làm sao đóng góp cho 1 project viết bằng GO với git</title>
-      <link>https://luantranminh.github.io/blog/dong-gop-cho-golang-git/</link>
+      <link>https://minhluan.ml/blog/dong-gop-cho-golang-git/</link>
       <pubDate>Tue, 06 Nov 2018 12:18:28 +0700</pubDate>
       
-      <guid>https://luantranminh.github.io/blog/dong-gop-cho-golang-git/</guid>
+      <guid>https://minhluan.ml/blog/dong-gop-cho-golang-git/</guid>
       <description>Vấn đề Hôm trước, mình có gặp 1 project nhỏ viết bằng golang, hí hửng fork và clone về chạy thử . Nhưng đời không như mơ:
 Tất cả relative import trong project đều bị lỗi. Nếu muốn sử dụng được, mình phải đổi tất cả openebs/maya thành tên repo của mình luantranminh/maya. Rồi lỡ có phát hiện gì đó muốn pull request cho người ta thì sao 😨, bó tay.</description>
     </item>

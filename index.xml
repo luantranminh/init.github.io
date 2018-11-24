@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Minh Luan</title>
-    <link>https://luantranminh.github.io/</link>
+    <link>https://minhluan.ml/</link>
     <description>Recent content on Minh Luan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 23 Nov 2018 15:11:00 +0700</lastBuildDate>
     
-	<atom:link href="https://luantranminh.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://minhluan.ml/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tao không sợ Git</title>
-      <link>https://luantranminh.github.io/blog/git-co-gi-phai-so/</link>
+      <link>https://minhluan.ml/blog/git-co-gi-phai-so/</link>
       <pubDate>Fri, 23 Nov 2018 15:11:00 +0700</pubDate>
       
-      <guid>https://luantranminh.github.io/blog/git-co-gi-phai-so/</guid>
+      <guid>https://minhluan.ml/blog/git-co-gi-phai-so/</guid>
       <description>Đây là GIT, tool này cool lắm để xài nó thì chỉ cần nhớ vài command lines. Nếu bị lỗi á hả, lưu project ở chỗ khác xong xóa nó luôn đi, sau đó thì tải project không lỗi trên git về. Nghe quen không? source: xkcd Hỏi nhanh  Q: Git là gì?
 A: Git là một hệ thống quản lý mã nguồn (version control), phân tán . Q: Git để làm gì?</description>
     </item>
     
     <item>
       <title>Làm sao đóng góp cho 1 project viết bằng GO với git</title>
-      <link>https://luantranminh.github.io/blog/dong-gop-cho-golang-git/</link>
+      <link>https://minhluan.ml/blog/dong-gop-cho-golang-git/</link>
       <pubDate>Tue, 06 Nov 2018 12:18:28 +0700</pubDate>
       
-      <guid>https://luantranminh.github.io/blog/dong-gop-cho-golang-git/</guid>
+      <guid>https://minhluan.ml/blog/dong-gop-cho-golang-git/</guid>
       <description>Vấn đề Hôm trước, mình có gặp 1 project nhỏ viết bằng golang, hí hửng fork và clone về chạy thử . Nhưng đời không như mơ:
 Tất cả relative import trong project đều bị lỗi. Nếu muốn sử dụng được, mình phải đổi tất cả openebs/maya thành tên repo của mình luantranminh/maya. Rồi lỡ có phát hiện gì đó muốn pull request cho người ta thì sao 😨, bó tay.</description>
     </item>
