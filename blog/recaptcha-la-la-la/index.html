@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Minh Luan">
+<meta name="description" content="Nếu hay lang thang trên Internet chắc phải đôi lần bạn phải gõ một đống kí tự được làm xiên vẹo, &ldquo;censored&rdquo;, làm cho khó đọc các kiểu nhưng phải nhập đúng thì mới truy cập được website hoặc download tài liệu. Haha, đó chính là CAPTCHA.  Lúc trước mình cứ nghĩ nó để chống spam, nhưng sau đó lại không hiểu nếu để chống spam không thì tại sao có người trả tiền cho mình ngồi gõ đống CAPTCHA đó, thật ra phía sau đó là một ý tưởng vô cùng có ích dựa vào những người dùng internet, dùng người đọc những thứ mà máy scan không thể đọc được, do bị mờ, thiếu nét, sách cũ&hellip; .">
+
+<meta property="og:title" content="reCAPTCHA được sinh ra!" />
+<meta property="og:description" content="Nếu hay lang thang trên Internet chắc phải đôi lần bạn phải gõ một đống kí tự được làm xiên vẹo, &ldquo;censored&rdquo;, làm cho khó đọc các kiểu nhưng phải nhập đúng thì mới truy cập được website hoặc download tài liệu. Haha, đó chính là CAPTCHA.  Lúc trước mình cứ nghĩ nó để chống spam, nhưng sau đó lại không hiểu nếu để chống spam không thì tại sao có người trả tiền cho mình ngồi gõ đống CAPTCHA đó, thật ra phía sau đó là một ý tưởng vô cùng có ích dựa vào những người dùng internet, dùng người đọc những thứ mà máy scan không thể đọc được, do bị mờ, thiếu nét, sách cũ&hellip; ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://minhluan.ml/blog/recaptcha-la-la-la/" /><meta property="article:published_time" content="2018-12-06T21:59:10&#43;07:00"/>
+<meta property="article:modified_time" content="2018-12-06T21:59:10&#43;07:00"/>
+
+
+<title>
+
+
+     reCAPTCHA được sinh ra! 
+
+</title>
+<link rel="canonical" href="https://minhluan.ml/blog/recaptcha-la-la-la/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://minhluan.ml/css/reset.css?t=2018-12-06%2022%3a12%3a05.903416545%20%2b0700%20%2b07%20m%3d%2b0.114758455">
+    <link rel="stylesheet" href="https://minhluan.ml/css/pygments.css?t=2018-12-06%2022%3a12%3a05.903416545%20%2b0700%20%2b07%20m%3d%2b0.114758455">
+    <link rel="stylesheet" href="https://minhluan.ml/css/main.css?t=2018-12-06%2022%3a12%3a05.903416545%20%2b0700%20%2b07%20m%3d%2b0.114758455">
+    
+        <link rel="stylesheet" href="https://minhluan.ml/css/override.css?t=2018-12-06%2022%3a12%3a05.903416545%20%2b0700%20%2b07%20m%3d%2b0.114758455">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://minhluan.ml/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+                
+                
+                
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                
+                <a href="https://minhluan.ml/"><img class="avatar" src="https://minhluan.ml/img/pr.gif" srcset="https://minhluan.ml/img/pr.gif 1x"></a>
+            
+            <a href="https://minhluan.ml/"><div class="name">Minh Luan</div></a>
+            
+              <h3 class="self-intro">&#34;The secret of getting ahead is getting started.&#34; - Mark Twain</h3>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="https://minhluan.ml/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-about"><a href="https://minhluan.ml/about/"><span>About</span></a></li>
+                    
+                        <li class="nav-code"><a href="https://minhluan.ml/code/"><span>Code</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="https://github.com/luantranminh" target="_blank" rel="noopener"><img class="icon" src="https://minhluan.ml/img/github.svg" alt="github" /></a>
+        
+
+        
+
+        
+
+	
+
+        
+
+        
+            <a href="https://daf.ug/@minhluan" target="_blank" rel="noopener"><img class="icon" src="https://minhluan.ml/img/mastodon.svg" alt="mastodon" /></a>
+        
+
+        
+            <a href="http://www.linkedin.com/in/tranminhluan" target="_blank" rel="noopener"><img class="icon" src="https://minhluan.ml/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="https://www.instagram.com/minhluaannn/" target="_blank" rel="noopener"><img class="icon" src="https://minhluan.ml/img/instagram.svg" alt="instagram" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:tranminhluan1206@gmail.com"><img class="icon" src="https://minhluan.ml/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    reCAPTCHA được sinh ra!
+
+</div>
+
+                    <div class="initials"><a href="https://minhluan.ml/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Thu Dec 6 2018 21:59:10 &#43;07'>06-12-2018</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>4 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/25551568/49572873-48a10b80-f96f-11e8-8f11-16efd8d8039c.jpg" />
+</p>
+
+<p>Nếu hay lang thang trên Internet chắc phải đôi lần bạn phải gõ một đống kí tự được làm xiên vẹo, &ldquo;censored&rdquo;, làm cho khó đọc các kiểu nhưng phải nhập đúng thì mới truy cập được website hoặc download tài liệu. Haha, đó chính là <strong>CAPTCHA</strong>. </br>
+Lúc trước mình cứ nghĩ nó để chống spam, nhưng sau đó lại không hiểu nếu để chống spam không thì tại sao có người trả tiền cho mình ngồi gõ đống CAPTCHA đó, thật ra phía sau đó là một ý tưởng vô cùng có ích dựa vào những người dùng internet, <strong>dùng người đọc những thứ mà máy scan không thể đọc được</strong>, do bị mờ, thiếu nét, sách cũ&hellip; .</br> Nói cách khác, mỗi lần bạn gõ CAPTCHA bạn đã đóng góp công sức giúp số hóa đống tài liệu ở đâu đó trên thế giới, góp phần bảo tồn kiến thức nhân loại. Chậc 😲 gõ CAPTCHA thôi nhưng thật vĩ đại.</p>
+
+<h4 id="tl-dr">tl;dr</h4>
+
+<p>CAPTCHA là viết tắt của “Completely Automated Public Turing test to tell Computers and Humans Apart”, nói đơn giản là một thứ có thể tự động phân biệt đây là người hay là máy. Khi xưa có một ông tên là Alan Turing (<a href="https://en.wikipedia.org/wiki/Alan_Turing">wiki</a>), người được xem  là cha đẻ của ngành khoa học máy tính, ổng đóng góp rất rất rất nhiều cho nhân loại.
+Chuyện kể rằng vào thế chiến thứ 2, Đức quốc xã truyền tin nhau bằng những đoạn thông điệp được mã hóa bằng máy Enigma (<a href="https://vi.wikipedia.org/wiki/M%C3%A1y_Enigma">wiki</a>), những thông điệp được mã hóa này quá khó, quân  đồng minh đã phải lập ra một động là Hut 8, do Alan Turing dẫn đầu, sau đó ông đã chế ra máy bombe để giải mã máy Enigma. Về cuộc đời của Alan Turing lúc thế chiến thứ 2 đã được chuyển thể thành <a href="https://www.imdb.com/title/tt2084970/">The Imitation Game</a></p>
+
+<p>Vậy đoạn trên thì có liên quan gì tới CAPTCHA 😧 Vì phép thử Turning  là một trong những cống hiến của ông trong ngành trí tuệ nhân tạo, phép thử này dùng đê xác định liệu con robot này có suy nghĩ &ldquo;xịn&rdquo; như con người được hay không bằng cách cho một người thật nói chuyện với một trí tuệ nhân tạo và một người thật khác, cả con robot và người đều cố chứng minh rằng mình là người thật.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/25551568/49575035-4beac600-f974-11e8-8af9-f33cec1b6632.png" />
+</p>
+Nếu người chơi không thể nhận ra đâu là người đâu mà máy, thì chào mừng tới kỉ nguyên mới.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/25551568/49592507-d7c81680-f9a3-11e8-81fc-c913d0dd89f6.jpg" />
+</p></p>
+
+<p></br>
+Và CAPTCHA cũng có một phần mục đích giống như vậy, nếu bạn quá lười để đọc cái tên tiếng anh dài ngoằn của của CAPTCHA thì có thể xem lại, trong đó có nhắc đến Turing test đó.</p>
+
+<p>Và reCAPTCHA  là sự kết hợp của CAPTCHA và việc số hóa sách. Ai nghĩ nên ý tưởng triệu đô đó? Là Luis von Ahn (<a href="https://vi.wikipedia.org/wiki/Luis_von_Ahn">wiki</a>). </br> Ban đầu CAPTCHA dùng để chống lại spam bots, chúng hiển thị đống kí tự mà máy không đọc được nhưng với con người thì dễ dàng, nhưng von Ahn không hài lòng với điều đó ông nghĩ rằng chúng ta có thể tận dụng nguồn lực dồi dào của đội quân gõ CAPTCHA ngày đêm làm sao vừa có ích, vừa có tiền. </br>
+Và reCAPTCHA ra đời, bước đầu reCAPTCHA được áp dụng ở The New York Times, chỉ trong hơn 1 năm nó đã số hóa 13 triệu bản thảo từ năm 1851 cho đến 2011. 😳 Sau đó thì Google làm sao bỏ lỡ ý tưởng triệu đô này được và đã mua nó với số tiền chắc khoảng khoảng 30 triệu đô.
+</br>
+Google bây giờ &ldquo;dùng&rdquo; người dùng reCAPTCHA để số hóa dữ liệu, nhận biết bảng hiệu, số nhà trên đường, dán nhãn hình ảnh để sau này mấy con AI học.
+<img src="https://user-images.githubusercontent.com/25551568/49576055-c87ea400-f976-11e8-9c6a-e1f8bf021b47.png" alt="image" />
+hmmm
+<p align="center">
+<img src="https://camo.githubusercontent.com/6783f8ed2df58b0e5d5bfb6bd365f70db5b64adc/68747470733a2f2f692e67697068792e636f6d2f6d656469612f634b355847376739444839652f67697068792e77656270" />
+</p></p>
+
+                <br>
+                
+                <p class="back-to-posts"><a href="https://minhluan.ml/blog">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-120923883-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

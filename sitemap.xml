@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://minhluan.ml/blog/recaptcha-la-la-la/</loc>
+    <lastmod>2018-12-06T21:59:10+07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://minhluan.ml/blog/git-co-gi-phai-so/</loc>
     <lastmod>2018-11-23T15:11:00+07:00</lastmod>
   </url>
@@ -47,7 +52,7 @@
   
   <url>
     <loc>https://minhluan.ml/</loc>
-    <lastmod>2018-11-23T15:11:00+07:00</lastmod>
+    <lastmod>2018-12-06T21:59:10+07:00</lastmod>
     <priority>0</priority>
   </url>
   

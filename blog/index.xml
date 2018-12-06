@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>reCAPTCHA được sinh ra!</title>
+      <link>https://minhluan.ml/blog/recaptcha-la-la-la/</link>
+      <pubDate>Thu, 06 Dec 2018 21:59:10 +0700</pubDate>
+      
+      <guid>https://minhluan.ml/blog/recaptcha-la-la-la/</guid>
+      <description>Nếu hay lang thang trên Internet chắc phải đôi lần bạn phải gõ một đống kí tự được làm xiên vẹo, &amp;ldquo;censored&amp;rdquo;, làm cho khó đọc các kiểu nhưng phải nhập đúng thì mới truy cập được website hoặc download tài liệu. Haha, đó chính là CAPTCHA.  Lúc trước mình cứ nghĩ nó để chống spam, nhưng sau đó lại không hiểu nếu để chống spam không thì tại sao có người trả tiền cho mình ngồi gõ đống CAPTCHA đó, thật ra phía sau đó là một ý tưởng vô cùng có ích dựa vào những người dùng internet, dùng người đọc những thứ mà máy scan không thể đọc được, do bị mờ, thiếu nét, sách cũ&amp;hellip; .</description>
+    </item>
+    
+    <item>
       <title>Tao không sợ Git</title>
       <link>https://minhluan.ml/blog/git-co-gi-phai-so/</link>
       <pubDate>Fri, 23 Nov 2018 15:11:00 +0700</pubDate>
