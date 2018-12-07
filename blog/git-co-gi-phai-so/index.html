@@ -44,11 +44,11 @@ A: Git là một hệ thống quản lý mã nguồn (version control), phân t�
 
 
     
-    <link rel="stylesheet" href="https://minhluan.ml/css/reset.css?t=2018-12-07%2009%3a07%3a23.106425853%20%2b0700%20%2b07%20m%3d%2b0.064453085">
-    <link rel="stylesheet" href="https://minhluan.ml/css/pygments.css?t=2018-12-07%2009%3a07%3a23.106425853%20%2b0700%20%2b07%20m%3d%2b0.064453085">
-    <link rel="stylesheet" href="https://minhluan.ml/css/main.css?t=2018-12-07%2009%3a07%3a23.106425853%20%2b0700%20%2b07%20m%3d%2b0.064453085">
+    <link rel="stylesheet" href="https://minhluan.ml/css/reset.css?t=2018-12-07%2009%3a20%3a26.560300756%20%2b0700%20%2b07%20m%3d%2b0.082763753">
+    <link rel="stylesheet" href="https://minhluan.ml/css/pygments.css?t=2018-12-07%2009%3a20%3a26.560300756%20%2b0700%20%2b07%20m%3d%2b0.082763753">
+    <link rel="stylesheet" href="https://minhluan.ml/css/main.css?t=2018-12-07%2009%3a20%3a26.560300756%20%2b0700%20%2b07%20m%3d%2b0.082763753">
     
-        <link rel="stylesheet" href="https://minhluan.ml/css/override.css?t=2018-12-07%2009%3a07%3a23.106425853%20%2b0700%20%2b07%20m%3d%2b0.064453085">
+        <link rel="stylesheet" href="https://minhluan.ml/css/override.css?t=2018-12-07%2009%3a20%3a26.560300756%20%2b0700%20%2b07%20m%3d%2b0.082763753">
     
 
 
@@ -182,7 +182,7 @@ A: Git là một hệ thống quản lý mã nguồn (version control), phân t�
                 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/25551568/48826509-11dacb00-ed9d-11e8-8c36-87cdf13a167a.png" alt="Thấy quen không"/>
+  <img src="https://user-images.githubusercontent.com/25551568/49623498-7f733200-fa00-11e8-80e6-b82363ec762e.png" alt="Thấy quen không"/>
 </p>
 <p align="center">
   Đây là GIT, tool này cool lắm để xài nó thì chỉ cần nhớ vài command lines. Nếu bị lỗi á hả, lưu project ở chỗ khác xong xóa nó luôn đi, sau đó thì tải project không lỗi trên git về. Nghe quen không?
@@ -210,7 +210,7 @@ Hoặc nhiều version control systems thay thế như <a href="https://en.wikip
 <p>Khi một project lớn lên, nhiều người cùng làm hơn, chúng ta cần kiểm soát được ai, làm gì (để khi có bug thì còn biết đổ tội cho thằng nào), hoặc thấy phiên bản này nhiều bugs quá cần quay lại code cũ đã ổn định gấp để release không bị sếp chửi.<br>
 Hoặc nếu bạn là &ldquo;solo man&rdquo; làm việc một mình, code một tính năng mới hết 3 ngày, 3 ngày sau nữa thì  nó mới lỗi 😳, vào lúc đó các lập trình viên thường lại rơi vào trạng thái quen thuộc: mất trí nhớ.
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/25551568/48932921-c8bb8000-ef30-11e8-9088-16e9bccf8181.png" height="60%" width="60%" alt="Thấy quen không"/>
+  <img src="https://user-images.githubusercontent.com/25551568/49623468-679bae00-fa00-11e8-859c-69cde07028ad.png" height="60%" width="60%" alt="Thấy quen không"/>
 </p>
  Thế là version control ra đời, à bài này nói về Git, nên Git ra đời.</p>
 
@@ -331,7 +331,7 @@ Untracked files:
 
 <p>Đây là phần lõi của Git, còn được gọi là <strong>staging</strong> area. Trong này sẽ mapping mấy cái file vào trong mấy cái ở trong phần objects của <code>.git</code>.
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/25551568/48942714-47291980-ef53-11e8-83ba-3b4a9b5fb019.png" height="60%" width="60%" alt="Thấy quen không"/>
+  <img src="https://user-images.githubusercontent.com/25551568/49623414-2c00e400-fa00-11e8-9050-ed50e12e8cec.png" height="60%" width="60%" alt="Thấy quen không"/>
 </p></p>
 
 <p><strong>Giải thích:</strong> Chúng ta đang ở phiên bản hiện tại của code và đang làm việc trên nó (<strong>working directory</strong>), <code>git add</code> sẽ bỏ vào <strong>staging area</strong> giống giỏ hàng để biết được files nào sẽ được lưu sau commit, <code>git commit</code> sẽ bỏ những files đã <code>git add</code> vào <strong>local repository</strong>, kể từ lúc này ta đã có version mới, có thể revert lại commit trước đó.<br>
@@ -399,7 +399,7 @@ Cái thứ 2 chính là <strong>tree</strong> mà cái thứ nhất nói tới, 
 
 <p>Có <strong>branch</strong> để làm gì? Hãy tưởng tượng bạn muốn làm gì đó nhưng sợ hư hại tới những thứ đang có, bạn muốn viết một tính năng nhảm nhí như sợ nếu nó không hoạt động thì phải chỉnh tùm lum revert mất công, <strong>branch</strong> là một giải pháp. Hãy nghĩ <strong>branch</strong> giống một phiên bản y chang của code bạn đang viết tại thời điểm tạo <strong>branch</strong>, sau đó làm việc trên <strong>branch</strong> chỉ ảnh hưởng tới <strong>branch</strong> đó thôi, thích phá gì phá.
 <p align="center">
-<img src="https://user-images.githubusercontent.com/25551568/48944685-565f9580-ef5a-11e8-8bde-77d750eb30df.png" alt="Hihi"/>
+<img src="https://user-images.githubusercontent.com/25551568/49623361-e17f6780-f9ff-11e8-9aff-194db887b34b.png" alt="Hihi"/>
 </p></p>
 
 <h2 id="tl-dr">TL;DR</h2>
@@ -421,7 +421,7 @@ Cái thứ 2 chính là <strong>tree</strong> mà cái thứ nhất nói tới, 
 
 <p>Bạn vẫn còn sợ Git, hmm, chịu thôi:
 <p align="center">
-<img src="https://user-images.githubusercontent.com/25551568/48944525-af7af980-ef59-11e8-8ba4-f68c74d0c50e.png" alt="Hihi"/>
+<img src="https://user-images.githubusercontent.com/25551568/49623328-c57bc600-f9ff-11e8-8262-d49f5362522f.png" alt="Hihi"/>
 </p></p>
 
                 <br>
